@@ -3,57 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js" href="js/bootstrap.bundle.min.js" defer></script>
-    <title>Villa Vertigo</title>
 </head>
+<body>
 
-    <header>
-        <!-- Mise en place du header a faire. Banderolle avec menu -->
-    </header>
+<!-- Barre de navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Mon Site</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">À propos</a> <!-- a modifier -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Services</a> <!-- a modifier -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a> <!-- a modifier -->
+      </li>
+    </ul>
+  </div>
+</nav>
 
-    <body>
-        <!-- Introduction -->
-        <section class="container">
-            <h1 class="row text-center">Villa Vertigo </h1>
+<!-- Section principale -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/150" class="card-img-top" alt="..."> <!-- a modifier -->
+        <div class="card-body">
+          <h5 class="card-title">Titre de la carte</h5>
+          <p class="card-text">Voici une brève description du contenu de cette carte.</p> <!-- a modifier -->
+          <a href="#" class="btn btn-primary">En savoir plus</a> <!-- a modifier -->
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/150" class="card-img-top" alt="..."> <!-- a modifier -->
+        <div class="card-body">
+          <h5 class="card-title">Titre de la carte</h5> <!-- a modifier -->
+          <p class="card-text">Voici une brève description du contenu de cette carte.</p> <!-- a modifier -->
+          <a href="#" class="btn btn-primary">En savoir plus</a> <!-- a modifier -->
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/150" class="card-img-top" alt="..."> <!-- a modifier -->
+        <div class="card-body">
+          <h5 class="card-title">Titre de la carte</h5> <!-- a modifier -->
+          <p class="card-text">Voici une brève description du contenu de cette carte.</p> <!-- a modifier -->
+          <a href="#" class="btn btn-primary">En savoir plus</a> <!-- a modifier -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-                <p class="row lead col">
-                    Découvrez l'élégance et la sérénité dans cette somptueuse villa de luxe à Marrakech. Nichée au cœur d'un cadre paisible et verdoyant, cette propriété offre une évasion parfaite avec un mélange exquis de confort moderne et de charme marocain authentique.
-                </p>
-        </section>
+<!-- Pied de page -->
+<footer class="bg-light text-center text-lg-start mt-5">
+  <div class="text-center p-3">
+    © 2024 Villa Vertigo.
+    <a class="text-dark" href="#">villavertigo.com</a>
+  </div>
+</footer>
 
-        <!-- Corps de page -->
-        <section class="container">
-            <h2 class="row text-center align-self-center">Caractéristiques Principales :</h2>
-
-            <ul class="row col-6 align-self-start">
-                <li><b>Espace de Vie Luxueux :</b> La villa dispose de plusieurs suites spacieuses, chacune décorée avec goût et équipée de toutes les commodités nécessaires pour garantir un séjour des plus confortables. Les grandes baies vitrées permettent à la lumière naturelle d'inonder les pièces, créant une atmosphère chaleureuse et accueillante.</li>
-                <li><b>Piscine Privée :</b> Profitez d'un plongeon rafraîchissant dans votre piscine privée, entourée de chaises longues confortables où vous pourrez vous détendre sous le soleil marocain. Les serviettes moelleuses sont soigneusement roulées et prêtes à l'emploi.</li>
-            </ul>
-
-            <ul class="row col-6 align-self-end">
-                <li><b>Extérieurs Magnifiques :</b> Le jardin est un véritable havre de paix, orné d'oliviers et de palmiers, offrant un cadre idéal pour des moments de détente en plein air. Un coin salon extérieur est parfait pour des repas en famille ou entre amis, avec un coin barbecue pour des soirées mémorables sous les étoiles.</li>
-                <li><b>Décoration Élégante :</b> Chaque détail de la villa a été pensé pour refléter le luxe et l'élégance. Les matériaux de haute qualité, les meubles raffinés et les touches décoratives inspirées de la culture locale créent un environnement unique et sophistiqué.</li>
-            </ul>
-
-            <ul class="row col-6 align-self-start">
-                <li><b>Emplacement Idéal :</b> Située à proximité des principales attractions de Marrakech, vous pourrez facilement explorer les souks animés, les jardins luxuriants et les monuments historiques tout en profitant de la tranquillité de votre villa privée.</li>
-            </ul>
-
-        </section>
-
-        <!-- Fin de page -->
-        <section class="container"> 
-            <h2 class="row text-center align-self-center">Pourquoi Choisir Cette Villa ?</h2>
-
-                <p>
-                    Cette villa est bien plus qu'un simple lieu de séjour, c'est une expérience à part entière. Que vous souhaitiez vous détendre au bord de la piscine, organiser des soirées inoubliables ou explorer les merveilles de Marrakech, cette propriété répond à toutes vos envies. La fusion parfaite entre tradition et modernité vous promet un séjour d'exception dans une des plus belles villes du Maroc.
-                    Réservez dès maintenant votre séjour dans cette villa de rêve et offrez-vous une escapade luxueuse à Marrakech. Contactez-nous pour plus d'informations et pour réserver vos dates. Profitez de la splendeur et de la magie de Marrakech dans le confort et le luxe absolus.
-                </p>
-        </section>
-    </body>
-
-    <footer>
-        <!-- Footer a mettre en place. Copyright, contacts, plan du site -->
-    </footer>
-    </html>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

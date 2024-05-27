@@ -9,22 +9,51 @@
 </head>
 <body>
 
+    <!-- Style de la banniere  -->
+    <style>
+        .banner {
+            position: relative;
+            background-image: url('images/28.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .banner-text {
+            background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .section-primary {
+            background-color: #f8f9fa; /* Couleur de fond section primaire*/
+            padding: 50px 0;
+        }
+        .section-secondary {
+            background-color: #e9ecef; /* Couleur de fond section secondaire */
+            padding: 50px 0;
+        }
+    </style>
+
 <!-- Barre de navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Mon Site</a>
+  <a class="navbar-brand" href="#">Villa Vertigo</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#Accueil">Accueil <span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">À propos</a> <!-- a modifier -->
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Services</a> <!-- a modifier -->
+        <a class="nav-link" href="#Services">Services</a> <!-- a modifier -->
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Contact</a> <!-- a modifier -->
@@ -33,41 +62,122 @@
   </div>
 </nav>
 
+<!-- Bannière -->
+<header class="banner">
+    <div class="banner-text">
+        <h1>Bienvenue sur Mon Site</h1>
+        <p>Voici une brève description ou un slogan.</p>
+        <a href="#" class="btn btn-primary">En savoir plus</a>
+    </div>
+</header>
+
 <!-- Section principale -->
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/150" class="card-img-top" alt="..."> <!-- a modifier -->
-        <div class="card-body">
-          <h5 class="card-title">Titre de la carte</h5>
-          <p class="card-text">Voici une brève description du contenu de cette carte.</p> <!-- a modifier -->
-          <a href="#" class="btn btn-primary">En savoir plus</a> <!-- a modifier -->
+<section name="Accueil" class="section-primary">
+    <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+        <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="..."> <!-- a modifier -->
+            <div class="card-body">
+            <!-- <h5 class="card-title">Titre de la carte</h5> -->
+            <p class="card-text">Espace de Vie Luxueux</p> <!-- a modifier -->
+            <!-- <a href="#" class="btn btn-primary">En savoir plus</a> a modifier -->
+            </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card">
+            <img src="images/23.jpeg" class="card-img-top" alt="..."> <!-- a modifier -->
+            <div class="card-body">
+            <!-- <h5 class="card-title">Titre de la carte</h5> a modifier -->
+            <p class="card-text">Piscine Privée</p> <!-- a modifier -->
+            <!-- <a href="#" class="btn btn-primary">En savoir plus</a> a modifier -->
+            </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card">
+            <img src="images/28.jpeg" class="card-img-top" alt="..."> <!-- a modifier -->
+            <div class="card-body">
+            <!-- <h5 class="card-title">Titre de la carte</h5> a modifier -->
+            <p class="card-text">Extérieurs Magnifiques</p> <!-- a modifier -->
+            <!-- <a href="#" class="btn btn-primary">En savoir plus</a> a modifier -->
+            </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/1.jpeg" class="card-img-top" alt="..."> <!-- a modifier -->
+                <div class="card-body">
+                <!-- <h5 class="card-title">Titre de la carte</h5> a modifier -->
+                <p class="card-text">Décoration Élégante</p> <!-- a modifier -->
+                <!-- <a href="#" class="btn btn-primary">En savoir plus</a> a modifier -->
+                </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/29.jpeg" class="card-img-top" alt="..."> <!-- a modifier -->
+                <div class="card-body">
+                <!-- <h5 class="card-title">Titre de la carte</h5> a modifier -->
+                <p class="card-text">Emplacement Idéal</p> <!-- a modifier -->
+                <!-- <a href="#" class="btn btn-primary">En savoir plus</a> a modifier -->
+                </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/19.jpeg" class="card-img-top" alt="..."> <!-- a modifier -->
+                    <div class="card-body">
+                    <!-- <h5 class="card-title">Titre de la carte</h5> a modifier -->
+                    <p class="card-text">Bungalow Privatif</p> <!-- a modifier -->
+                    <!-- <a href="#" class="btn btn-primary">En savoir plus</a> a modifier -->
+                    </div>
+                </div>
+                </div>
+    </div>
+    </div>
+</section>
+
+<!-- Section Nos Services -->
+<section name="Services" class="section-secondary">
+    <div class="container">
+      <h2 class="text-center mb-5">Nos Services</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Restauration">
+            <div class="card-body">
+              <h5 class="card-title">Services de restauration</h5>
+              <p class="card-text">Description du service de restauration</p>
+              <a href="#" class="btn btn-primary">En savoir plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Literie d'exception">
+            <div class="card-body">
+              <h5 class="card-title">Literie d'exception</h5>
+              <p class="card-text">Description du service 2.</p>
+              <a href="#" class="btn btn-primary">En savoir plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Espaces de vie Luxueux">
+            <div class="card-body">
+              <h5 class="card-title">Espaces de vie Luxueux</h5>
+              <p class="card-text">Description des espaces de vie Luxueux.</p>
+              <a href="#" class="btn btn-primary">En savoir plus</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/150" class="card-img-top" alt="..."> <!-- a modifier -->
-        <div class="card-body">
-          <h5 class="card-title">Titre de la carte</h5> <!-- a modifier -->
-          <p class="card-text">Voici une brève description du contenu de cette carte.</p> <!-- a modifier -->
-          <a href="#" class="btn btn-primary">En savoir plus</a> <!-- a modifier -->
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/150" class="card-img-top" alt="..."> <!-- a modifier -->
-        <div class="card-body">
-          <h5 class="card-title">Titre de la carte</h5> <!-- a modifier -->
-          <p class="card-text">Voici une brève description du contenu de cette carte.</p> <!-- a modifier -->
-          <a href="#" class="btn btn-primary">En savoir plus</a> <!-- a modifier -->
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  </section>
+
 
 <!-- Pied de page -->
 <footer class="bg-light text-center text-lg-start mt-5">

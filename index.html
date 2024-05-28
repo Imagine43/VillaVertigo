@@ -31,7 +31,7 @@
         }
         .banner {
             position: relative;
-            background-image: url('images/28.jpeg'); 
+            background-image: url('images/27-banner.jpeg'); 
             background-size: cover;
             background-position: center;
             height: 600px;
@@ -55,11 +55,42 @@
             background-color: #e0e0e0; /* Couleur de fond section secondaire */
             padding: 50px 0;
         }
+
+        /* Cards Styles */
+
+        .card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card-overlay-text {
+            color: #000;
+            font-size: 1.25rem;
+            text-align: center;
+        }
+
+        .card:hover .card-overlay {
+            opacity: 1;
+        }
     </style>
 
 <!-- Barre de navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark navbar-top">
-  <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
+  <a class="navbar-brand" href="#"><img src="" alt=""></a> <!-- A modifier pour mettre url final site-->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -68,11 +99,12 @@
       <li class="nav-item active">
         <a class="nav-link" href="#Accueil">Accueil <span class="sr-only"></span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#A-Propos">À propos</a> <!-- a modifier -->
-      </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="#Services">Services</a> <!-- a modifier -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#A-Propos">À propos</a> <!-- a modifier -->
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Réservez</a> <!-- a modifier -->
@@ -94,116 +126,101 @@
 <section id="Accueil" class="section-primary">
     <div class="container mt-5">
         <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/3.jpeg" class="card-img-top" alt="..."> <!-- a modifier -->
-                        <div class="card-body">
-                            <!-- <h5 class="card-title">Titre de la carte</h5> -->
-                            <p class="card-text">Espace de Vie Luxueux</p> <!-- a modifier -->
-                            <!-- <a href="#" class="btn btn-primary">En savoir plus</a> a modifier -->
-                        </div>
-                    </div>
-                </div>
-            <div class="col-md-4">
+            <div class="col-md-4 d-flex align-items-stretch">
                 <div class="card">
-                    <img src="images/23.jpeg" class="card-img-top" alt="..."> <!-- a modifier 150*150 --> 
-                    <div class="card-body">
-                        <!-- <h5 class="card-title">Titre de la carte</h5> a modifier -->
-                        <p class="card-text">Piscine Privée</p> <!-- a modifier -->
-                        <!-- <a href="#" class="btn btn-primary">En savoir plus</a> a modifier -->
+                    <img src="images/3.jpeg" class="card-img-top" alt="Luxurious Living Space">
+                    <div class="card-overlay">
+                        <p class="card-overlay-text">Espace de Vie Luxueux</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 d-flex align-items-stretch">
                 <div class="card">
-                    <img src="images/28.jpeg" class="card-img-top" alt="..."> <!-- a modifier -->
-                    <div class="card-body">
-                        <!-- <h5 class="card-title">Titre de la carte</h5> a modifier -->
-                        <p class="card-text">Extérieurs Magnifiques</p> <!-- a modifier -->
-                        <!-- <a href="#" class="btn btn-primary">En savoir plus</a> a modifier -->
+                    <img src="images/23.jpeg" class="card-img-top" alt="Private Pool">
+                    <div class="card-overlay">
+                        <p class="card-overlay-text">Piscine Privée</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/28.jpeg" class="card-img-top" alt="Beautiful Exteriors">
+                    <div class="card-overlay">
+                        <p class="card-overlay-text">Extérieurs Magnifiques</p>
                     </div>
                 </div>
             </div>
         </div>
-          <!-- Saut de ligne entre les deux lignes de cartes -->
-    <div class="my-4"></div>
-    
-    
-    <div class="row">
-        <div class="col-md-4">
+        
+        <div class="my-4"></div>
+        
+        <div class="row">
+            <div class="col-md-4 d-flex align-items-stretch">
                 <div class="card">
-                        <img src="images/1.jpeg" class="card-img-top" alt="..."> <!-- a modifier -->
-                        <div class="card-body">
-                            <!-- <h5 class="card-title">Titre de la carte</h5> a modifier -->
-                            <p class="card-text">Décoration Élégante</p> <!-- a modifier -->
-                            <!-- <a href="#" class="btn btn-primary">En savoir plus</a> a modifier -->
-                        </div>
-                </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                    <img src="images/maps.PNG" class="card-img-top" alt="..."> <!-- a modifier -->
-                    <div class="card-body">
-                        <!-- <h5 class="card-title">Titre de la carte</h5> a modifier -->
-                        <p class="card-text">Emplacement Idéal</p> <!-- a modifier -->
-                        <!-- <a href="#" class="btn btn-primary">En savoir plus</a> a modifier -->
+                    <img src="images/1.jpeg" class="card-img-top" alt="Elegant Decoration">
+                    <div class="card-overlay">
+                        <p class="card-overlay-text">Décoration Élégante</p>
                     </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card">
-                <img src="images/19.jpeg" class="card-img-top" alt="..."> <!-- a modifier -->
-                <div class="card-body">
-                    <!-- <h5 class="card-title">Titre de la carte</h5> a modifier -->
-                    <p class="card-text">Bungalow Privatif</p> <!-- a modifier -->
-                    <!-- <a href="#" class="btn btn-primary">En savoir plus</a> a modifier -->
                 </div>
             </div>
-
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/maps.PNG" class="card-img-top" alt="Ideal Location">
+                    <div class="card-overlay">
+                        <p class="card-overlay-text">Emplacement Idéal</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/11.jpeg" class="card-img-top" alt="Private Bungalow">
+                    <div class="card-overlay">
+                        <p class="card-overlay-text">Bungalow Privatif</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
 </section>
 
 <!-- Section Nos Services -->
 <section id="Services" class="section-secondary">
     <div class="container">
-      <h2 class="text-center mb-5">Nos Services</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="images/couscous.jpeg" class="card-img-top" alt="Restauration">
-            <div class="card-body">
-              <h5 class="card-title">Services de restauration</h5>
-              <p class="card-text">Description du service de restauration</p>
-              <a href="#" class="btn btn-primary">En savoir plus</a>
+        <h2 class="text-center mb-5">Nos Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/couscous.jpeg" class="card-img-top" alt="Restauration">
+                    <div class="card-overlay">
+                        <p class="card-overlay-text">Description du service de restauration</p>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="images/25.jpeg" class="card-img-top" alt="Literie d'exception">
-            <div class="card-body">
-              <h5 class="card-title">Literie d'exception</h5>
-              <p class="card-text">Description du service 2.</p>
-              <a href="#" class="btn btn-primary">En savoir plus</a>
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/25.jpeg" class="card-img-top" alt="Literie d'exception">
+                    <div class="card-overlay">
+                        <p class="card-overlay-text">Description du service 2</p>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="images/1.jpeg" class="card-img-top" alt="Espaces de vie Luxueux">
-            <div class="card-body">
-              <h5 class="card-title">Espaces de vie Luxueux</h5>
-              <p class="card-text">Description des espaces de vie Luxueux.</p>
-              <a href="#" class="btn btn-primary">En savoir plus</a>
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/1.jpeg" class="card-img-top" alt="Espaces de vie Luxueux">
+                    <div class="card-overlay">
+                        <p class="card-overlay-text">Description des espaces de vie Luxueux</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
+
+
+
+
+
+
 
 
 <!-- Pied de page -->
@@ -218,6 +235,9 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+
+
+<!-- NavBar Script  -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var navbar = document.querySelector('.navbar');

@@ -11,6 +11,16 @@
 
     <!-- Style de la banniere  -->
     <style>
+        body {
+        background-color: #DEB887;
+        }
+        footer {
+            background-color: #DEB887; /* Utilisez la même couleur que le corps */
+            color: black; /* Pour assurer la lisibilité du texte sur le fond */
+        }
+        
+        /* Navbar styles  */
+        
         .navbar {
             position: fixed;
             width: 100%;
@@ -47,12 +57,12 @@
             border-radius: 5px;
         }
         .section-primary {
-            background-color: #f8f9fa; /* Couleur de fond section primaire*/
+            background-color: #F5DEB3; /* Couleur de fond section primaire*/
             padding: 50px 0;
-            margin-top: 60px; /* Pour compenser la hauteur de la barre de navigation fixe */
+            margin-top: 0px; /* Pour compenser la hauteur de la barre de navigation fixe */
         }
         .section-secondary {
-            background-color: #e0e0e0; /* Couleur de fond section secondaire */
+            background-color: #DEB887; /* Couleur de fond section secondaire */
             padding: 50px 0;
         }
 
@@ -121,7 +131,6 @@
         <a href="#" class="btn btn-success">Réservez votre séjour !</a>
     </div>
 </header>
-
 <!-- Section principale -->
 <section id="Accueil" class="section-primary">
     <div class="container mt-5">
@@ -181,6 +190,19 @@
             </div>
         </div>
     </div>
+    <br>
+
+    <div class="row">
+            <h2 class="text-center mb-5">Pourquoi choisir cette Villa ?</h2>
+    </div>
+    
+    <div class="row">
+        <p class="text-center mb-5">
+            Cette villa est bien plus qu'un simple lieu de séjour, c'est une expérience à part entière. <br>
+            Que vous souhaitiez vous détendre au bord de la piscine, organiser des soirées inoubliables ou explorer les merveilles de Marrakech, cette propriété répond à toutes vos envies. La fusion parfaite entre tradition et modernité vous promet un séjour d'exception dans une des plus belles villes du Maroc. <br>
+            Réservez dès maintenant votre séjour dans cette villa de rêve et offrez-vous une escapade luxueuse à Marrakech. Contactez-nous pour plus d'informations et pour réserver vos dates. Profitez de la splendeur et de la magie de Marrakech dans le confort et le luxe absolus.
+        </p>
+    </div>
 </section>
 
 <!-- Section Nos Services -->
@@ -225,7 +247,7 @@
 
 <!-- Pied de page -->
 <footer id="A-Propos"class="bg-light text-center text-lg-start mt-5">
-  <div class="text-center p-3">
+  <div class="body text-center p-3">
     © 2024 Villa Vertigo.
     <a class="text-dark" href="#">villavertigo.com</a>
   </div>

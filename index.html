@@ -11,6 +11,24 @@
 
     <!-- Style de la banniere  -->
     <style>
+        .navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s, top 0.3s;
+        }
+        .navbar-top {
+            background-color: transparent;
+        }
+
+        .navbar-scrolled {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .navbar-hidden {
+            top: -60px; /* Ajustez selon la hauteur de la barre de navigation */
+        }
         .banner {
             position: relative;
             background-image: url('images/28.jpeg'); 
@@ -31,6 +49,7 @@
         .section-primary {
             background-color: #f8f9fa; /* Couleur de fond section primaire*/
             padding: 50px 0;
+            margin-top: 60px; /* Pour compenser la hauteur de la barre de navigation fixe */
         }
         .section-secondary {
             background-color: #e0e0e0; /* Couleur de fond section secondaire */
@@ -39,7 +58,7 @@
     </style>
 
 <!-- Barre de navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-top">
   <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -198,5 +217,33 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var navbar = document.querySelector('.navbar');
+        var lastScrollTop = 0;
+
+        window.addEventListener('scroll', function() {
+            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                // Descend
+                navbar.classList.add('navbar-hidden');
+            } else {
+                // Remonte
+                navbar.classList.remove('navbar-hidden');
+                if (currentScroll === 0) {
+                    navbar.classList.add('navbar-top');
+                    navbar.classList.remove('navbar-scrolled');
+                } else {
+                    navbar.classList.add('navbar-scrolled');
+                    navbar.classList.remove('navbar-top');
+                }
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pour Safari
+        });
+    });
+</script>
+
 </body>
 </html>

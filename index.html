@@ -13,414 +13,412 @@
 
 <body>
 
-<!-- Styles personnalisés  -->
-<style>
-        body {
-        /* background-color: #FFF8DC; */
-        background-color: #FFFFFF;
-        margin: 0;
-        /* display: flex; */
-        justify-content: center;
-        align-items: center;
-        font-family: 'Helvetica Neue', sans-serif;
-        }
-        footer {
-            background-color: #333333;
-            /* background-color: #FAEBD7 ;  */
-            color: white; /* Pour assurer la lisibilité du texte sur le fond */
-
-        }
-        
-        /* Navbar styles  */
-        
-        .navbar {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: background-color 0.3s, top 0.3s;
-            color: white;
-        }
-        .navbar-top {
-            background-color: transparent;
-        }
-
-        .navbar-scrolled {
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-
-        .navbar-hidden {
-            top: -60px; /* À ajuster selon la hauteur de la barre de navigation */
-        }
-        .banner {
-            position: relative;
-            background-image: url('images/27-banner.jpeg'); 
-            background-size: cover;
-            background-position: center;
-            height: 600px;
-            color: white;
-            text-align: center;
-            display: flex;
-            align-items: center;
+    <!-- Styles personnalisés  -->
+    <style>
+            body {
+            /* background-color: #FFF8DC; */
+            background-color: #FFFFFF;
+            margin: 0;
+            /* display: flex; */
             justify-content: center;
-        }
-        
-        /* Mobile display */
-
-        @media (max-width: 767.98px) {
-            .navbar {
-                background-color: rgba(0, 0, 0, 0.9);
-                text-align: center;
+            align-items: center;
+            font-family: 'Helvetica Neue', sans-serif;
             }
-        }
-        .banner-text {
-            /* background: rgba(0, 0, 0, 0.5); Fond semi-transparent */
-            padding: 20px;
-            border-radius: 5px;
-        }
-        .section-primary {
-            /* background-color: #F5DEB3;  */
-            background-color: #F5F5F5;
-            padding: 50px 0;
-            margin-top: 0px; /* Pour compenser la hauteur de la barre de navigation fixe */
-        }
-        .section-secondary {
-            /* background-color: #FFF8DC;  */
-            background-color: #E5E5E5;
-            padding: 50px 0;
-        }
+            footer {
+                background-color: #333333;
+                /* background-color: #FAEBD7 ;  */
+                color: white; /* Pour assurer la lisibilité du texte sur le fond */
 
-        /* Cards Styles */
+            }
+            
+            /* Navbar styles  */
+            
+            .navbar {
+                position: fixed;
+                width: 100%;
+                top: 0;
+                z-index: 1000;
+                transition: background-color 0.3s, top 0.3s;
+                color: white;
+            }
+            .navbar-top {
+                background-color: transparent;
+            }
 
-        .card {
-            position: relative;
-            overflow: hidden;
-        }
+            .navbar-scrolled {
+                background-color: rgba(0, 0, 0, 0.9);
+            }
 
-        .card-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
+            .navbar-hidden {
+                top: -60px; /* À ajuster selon la hauteur de la barre de navigation */
+            }
+            .banner {
+                position: relative;
+                background-image: url('images/27-banner.jpeg'); 
+                background-size: cover;
+                background-position: center;
+                height: 600px;
+                color: white;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            /* Mobile display */
 
-        .card-overlay-text {
-            color: #000;
-            font-size: 1.25rem;
-            text-align: center;
-        }
-
-        .card:hover .card-overlay {
-            opacity: 1;
-        }
-        .fixed-size {
-        height: 300px; 
-        width: 450px;
-        object-fit: cover;
-        }     
-
-        /* Carousel styles   */
-
-    /* Fix the size of the carousel images */
-    .carousel-item img {
-        height: 300px; /* Adjust the height as needed */
-        object-fit: cover;
-        width: 100%;
-    }
-
- </style>
-
-<!-- Barre de navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-top">
-  <a class="navbar-brand" href="#"><img src="" alt=""></a> <!-- A modifier pour mettre url final site-->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" style="color: white;"  href="#Accueil">Accueil <span class="sr-only"></span></a>
-      </li>
-      
-      <li class="nav-item">
-        <a class="nav-link" style="color: white;" href="#Services">Services</a> <!-- a modifier -->
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" style="color: white;" href="#A-Propos">À propos</a> <!-- a modifier -->
-      </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="#">Réservez</a> 
-      </li> -->
-    </ul>
-  </div>
-</nav>
-
-<!-- Bannière -->
-<header class="banner">
-    <div class="banner-text">
-        <h1>Villa Vertigo</h1>
-        <p>Découvrez l'élégance et la sérénité dans cette somptueuse villa de luxe à Marrakech.</p>
-        <a href="#" class="btn btn-success">Réservez votre séjour</a> <!-- Lien à modifier -->
-    </div>
-</header>
-
-<!-- Section principale -->
-<section id="Accueil" class="section-primary">
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <img src="images/53.jpeg" class="card-img-top fixed-size" alt="Luxurious Living Space">
-                    <div class="card-overlay">
-                        <p class="card-overlay-text">Espace de Vie Luxueux</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <img src="images/39-bis.jpeg" class="card-img-top fixed-size" alt="Private Pool">
-                    <div class="card-overlay">
-                        <p class="card-overlay-text">Piscine Privée</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <img src="images/50.jpeg" class="card-img-top fixed-size" alt="Beautiful Exteriors">
-                    <div class="card-overlay">
-                        <p class="card-overlay-text">Extérieurs Magnifiques</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="my-4"></div>
-        
-        <div class="row">
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <img src="images/3.jpeg" class="card-img-top fixed-size" alt="Elegant Decoration">
-                    <div class="card-overlay">
-                        <p class="card-overlay-text">Décoration Élégante</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <img src="images/maps.PNG" class="card-img-top fixed-size" alt="Ideal Location">
-                    <div class="card-overlay">
-                        <p class="card-overlay-text">
-                            Emplacement Idéal <br>
-                            <a href="https://www.google.com/maps?q=31.5788421630859,-7.86457490921021" style="color: black;" target="_blank" title="Ouvrir le plan sur Google Maps (Nouvel Onglet)">Route de Ouarzazate, route nationale 9</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <img src="images/45.jpeg" class="card-img-top fixed-size" alt="Private Bungalow">
-                    <div class="card-overlay">
-                        <p class="card-overlay-text">Bungalow Privatif</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Section carousel multiple -->
-
-<section class="section-carousel section-secondary">
-    <div class="container">
-        <div class="row">
-            <!-- Première card avec carousel -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div id="carouselCard1" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="images/59.jpeg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/60.jpeg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/63.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCard1" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Précédent</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselCard1" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Suivant</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Deuxième card avec carousel -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div id="carouselCard2" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="images/61.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/62.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/76.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCard2" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Précédent</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselCard2" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Suivant</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Troisième card avec carousel -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div id="carouselCard3" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="images/77.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/79.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/83.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/85.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/87.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCard3" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Précédent</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselCard3" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Suivant</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<!-- Section Nos Services -->
-<section id="Services" class="section-primary mb-0">
-    <div class="container">
-        <h2 class="text-center mb-5">Nos Services</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/couscous.jpeg" class="card-img-top fixed-size" alt="Traiteur">
-                    <div class="card-overlay">
-                        <p class="card-overlay-text">Traiteur marocain</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <img src="images/massage-marocain.jpg" class="card-img-top fixed-size" alt="Traditional massages">
-                    <div class="card-overlay">
-                        <p class="card-overlay-text">Massages Traditionnels</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <img src="images/majorelle.jpg" class="card-img-top fixed-size" alt="Guided Tours">
-                    <div class="card-overlay">
-                        <p class="card-overlay-text">Visites guidées</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Pied de page -->
-<footer id="A-Propos"class="text-center text-lg-start">
-  <div class="body text-center p-3">
-    © 2024 Villa Vertigo.
-    <a style="text-decoration: solid;color: gold;" href="#">villavertigo.com</a>
-  </div>
-</footer>
-
-<!-- scripts part -->
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<!-- NavBar Script  -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var navbar = document.querySelector('.navbar');
-        var lastScrollTop = 0;
-
-        window.addEventListener('scroll', function() {
-            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (currentScroll > lastScrollTop) {
-                // Descend
-                navbar.classList.add('navbar-hidden');
-            } else {
-                // Remonte
-                navbar.classList.remove('navbar-hidden');
-                if (currentScroll === 0) {
-                    navbar.classList.add('navbar-top');
-                    navbar.classList.remove('navbar-scrolled');
-                } else {
-                    navbar.classList.add('navbar-scrolled');
-                    navbar.classList.remove('navbar-top');
+            @media (max-width: 767.98px) {
+                .navbar {
+                    background-color: rgba(0, 0, 0, 0.9);
+                    text-align: center;
                 }
             }
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pour Safari
-        });
-    });
-</script>
+            .banner-text {
+                /* background: rgba(0, 0, 0, 0.5); Fond semi-transparent */
+                padding: 20px;
+                border-radius: 5px;
+            }
+            .section-primary {
+                /* background-color: #F5DEB3;  */
+                background-color: #F5F5F5;
+                padding: 50px 0;
+                margin-top: 0px; /* Pour compenser la hauteur de la barre de navigation fixe */
+            }
+            .section-secondary {
+                /* background-color: #FFF8DC;  */
+                background-color: #E5E5E5;
+                padding: 50px 0;
+            }
 
-<!-- JavaScript pour rendre les flèches du carousel cliquables -->
-<script>
-        $(document).ready(function(){
-        $('#carouselCard1').on('slide.bs.carousel', function () {
-            $('#carouselCard2, #carouselCard3').carousel('pause');
-        });
-        $('#carouselCard2').on('slide.bs.carousel', function () {
-            $('#carouselCard1, #carouselCard3').carousel('pause');
-        });
-        $('#carouselCard3').on('slide.bs.carousel', function () {
-            $('#carouselCard1, #carouselCard2').carousel('pause');
-        });
-    });
-</script>
+            /* Cards Styles */
+
+            .card {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .card-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.8);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .card-overlay-text {
+                color: #000;
+                font-size: 1.25rem;
+                text-align: center;
+            }
+
+            .card:hover .card-overlay {
+                opacity: 1;
+            }
+            .fixed-size {
+            height: 300px; 
+            width: 450px;
+            object-fit: cover;
+            }     
+
+            /* Carousel styles   */
+
+        /* Fix the size of the carousel images */
+        .carousel-item img {
+            height: 300px; /* Adjust the height as needed */
+            object-fit: cover;
+            width: 100%;
+        }
+
+    </style>
+
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-top">
+    <a class="navbar-brand" href="#"><img src="" alt=""></a> <!-- A modifier pour mettre url final site-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <a class="nav-link" style="color: white;"  href="#Accueil">Accueil <span class="sr-only"></span></a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" style="color: white;" href="#Services">Services</a> <!-- a modifier -->
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" style="color: white;" href="#A-Propos">À propos</a> <!-- a modifier -->
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Réservez</a> 
+        </li> -->
+        </ul>
+    </div>
+    </nav>
+
+    <!-- Bannière -->
+    <header class="banner">
+        <div class="banner-text">
+            <h1>Villa Vertigo</h1>
+            <p>Découvrez l'élégance et la sérénité dans cette somptueuse villa de luxe à Marrakech.</p>
+            <a href="#" class="btn btn-success">Réservez votre séjour</a> <!-- Lien à modifier -->
+        </div>
+    </header>
+
+    <!-- Section principale -->
+    <section id="Accueil" class="section-primary">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card">
+                        <img src="images/53.jpeg" class="card-img-top fixed-size" alt="Luxurious Living Space">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">Espace de Vie Luxueux</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card">
+                        <img src="images/39-bis.jpeg" class="card-img-top fixed-size" alt="Private Pool">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">Piscine Privée</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card">
+                        <img src="images/50.jpeg" class="card-img-top fixed-size" alt="Beautiful Exteriors">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">Extérieurs Magnifiques</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="my-4"></div>
+            
+            <div class="row">
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card">
+                        <img src="images/3.jpeg" class="card-img-top fixed-size" alt="Elegant Decoration">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">Décoration Élégante</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card">
+                        <img src="images/maps.PNG" class="card-img-top fixed-size" alt="Ideal Location">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">
+                                Emplacement Idéal <br>
+                                <a href="https://www.google.com/maps?q=31.5788421630859,-7.86457490921021" style="color: black;" target="_blank" title="Ouvrir le plan sur Google Maps (Nouvel Onglet)">Route de Ouarzazate, route nationale 9</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card">
+                        <img src="images/45.jpeg" class="card-img-top fixed-size" alt="Private Bungalow">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">Bungalow Privatif</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section carousel multiple -->
+
+    <section class="section-carousel section-secondary">
+        <div class="container">
+            <div class="row">
+                <!-- Première card avec carousel -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div id="carouselCard1" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/59.jpeg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/60.jpeg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/63.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCard1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Précédent</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselCard1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Suivant</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Deuxième card avec carousel -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div id="carouselCard2" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/61.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/62.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/76.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCard2" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Précédent</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselCard2" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Suivant</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Troisième card avec carousel -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div id="carouselCard3" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/77.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/79.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/83.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/85.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/87.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCard3" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Précédent</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselCard3" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Suivant</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
+
+    <!-- Section Nos Services -->
+    <section id="Services" class="section-primary mb-0">
+        <div class="container">
+            <h2 class="text-center mb-5">Nos Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/couscous.jpeg" class="card-img-top fixed-size" alt="Traiteur">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">Traiteur marocain</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card">
+                        <img src="images/massage-marocain.jpg" class="card-img-top fixed-size" alt="Traditional massages">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">Massages Traditionnels</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card">
+                        <img src="images/majorelle.jpg" class="card-img-top fixed-size" alt="Guided Tours">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">Visites guidées</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer id="A-Propos"class="text-center text-lg-start">
+    <div class="body text-center p-3">
+        © 2024 Villa Vertigo.
+        <a style="text-decoration: solid;color: gold;" href="#">villavertigo.com</a>
+    </div>
+    </footer>
+
+    <!-- scripts part -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- NavBar Script  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var navbar = document.querySelector('.navbar');
+            var lastScrollTop = 0;
+
+            window.addEventListener('scroll', function() {
+                var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (currentScroll > lastScrollTop) {
+                    // Descend
+                    navbar.classList.add('navbar-hidden');
+                } else {
+                    // Remonte
+                    navbar.classList.remove('navbar-hidden');
+                    if (currentScroll === 0) {
+                        navbar.classList.add('navbar-top');
+                        navbar.classList.remove('navbar-scrolled');
+                    } else {
+                        navbar.classList.add('navbar-scrolled');
+                        navbar.classList.remove('navbar-top');
+                    }
+                }
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pour Safari
+            });
+        });
+    </script>
+
+    <!-- JavaScript pour carousel -->
+    <script>
+            $(document).ready(function(){
+            $('#carouselCard1').on('slide.bs.carousel', function () {
+                $('#carouselCard2, #carouselCard3').carousel('pause');
+            });
+            $('#carouselCard2').on('slide.bs.carousel', function () {
+                $('#carouselCard1, #carouselCard3').carousel('pause');
+            });
+            $('#carouselCard3').on('slide.bs.carousel', function () {
+                $('#carouselCard1, #carouselCard2').carousel('pause');
+            });
+        });
+    </script>
 
 </body>
 </html>
